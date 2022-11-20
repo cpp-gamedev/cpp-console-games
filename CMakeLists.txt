@@ -1,4 +1,17 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(target_prefix cg)
+
 project(cpp-console-games)
 
-set(CMAKE_CXX_STANDARD 20)
+add_subdirectory(projects/tick-tac-toe)
+add_subdirectory(lib)
+
+add_executable(cpp-console-games)
+target_sources(${PROJECT_NAME} PRIVATE "src/main.cpp")
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+        ${target_prefix}::util
+        )

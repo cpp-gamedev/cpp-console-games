@@ -1,35 +1,18 @@
-# Prerequisites
-*.d
+**/.vs/*
+**/.vscode/*
+build/*
+out/*
+# CMake CLion
+cmake-build-*/
+.cache
+.DS_Store
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+CMakeSettings.json
+compile_commands.json
+/CMakeUserPresets.json
 
 # CLion
 .idea/
 
-# CMake
-cmake-build-*/
+
 
