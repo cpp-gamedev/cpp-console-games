@@ -6,7 +6,7 @@ set(target_prefix cg)
 
 project(cpp-console-games)
 
-add_subdirectory(projects/tick-tac-toe)
+add_subdirectory(projects/tic-tac-toe)
 add_subdirectory(lib)
 
 add_executable(cpp-console-games)

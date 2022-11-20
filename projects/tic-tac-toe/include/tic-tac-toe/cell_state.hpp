@@ -5,9 +5,9 @@ enum class CellState {
 	eNone,
 	eX,
 	eO,
-	eCount_
+	eCOUNT_
 };
 
-constexpr auto cell_state_str = EnumArray<CellState, std::string_view>{"   ", " X ", " O "};
+//constexpr auto cell_state_str_v = EnumArray<CellState, std::string_view>{"   ", " X ", " O "};
 } // namespace tic_tac_toe
 
