@@ -22,8 +22,11 @@ target_include_directories(tic-tac-toe
 target_sources(tic-tac-toe
         PUBLIC
         include/tic-tac-toe/cell_state.hpp
+        include/tic-tac-toe/player.hpp
+        include/tic-tac-toe/player_number.hpp
         include/tic-tac-toe/board.hpp
         include/tic-tac-toe/console_output_display.hpp
+
 
 
         PRIVATE

@@ -15,7 +15,7 @@ class consoleOutputDisplay {
 	using Row = std::array<CellState, 3>;
 	using Table = std::array<Row, 3>;
 
-	static void display_game_board(const Table & game_board, const cg::EnumArray<CellState, std::string_view> & c_state_str_v) ;
+	void display_game_board(const Table & game_board, const cg::EnumArray<CellState, std::string_view> & c_state_str_v) ;
 
 
 };

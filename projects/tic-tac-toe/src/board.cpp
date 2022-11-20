@@ -1,35 +1,28 @@
-#include <iostream>
-#include <tic-tac-toe/board.hpp>
-#include <tic-tac-toe/cell_state.hpp>
 
+#include <tic-tac-toe/board.hpp>
+#include <iostream>
 
 namespace tic_tac_toe {
 
-Board::Table Board::get_board() const { return m_table; }
 
+bool Board::place_piece(const int x, const int y, const Player &player) {
+	if (valid_placement(x, y)) {
+        m_table[x][y] = player.get_player_piece();
+        return true;
+    }
 
-void Board::d_print_board() {
-
-	d_print_current_state();
-    //std::cout << cell_state_str_v[m_table[0][0]] << cell_state_str_v[m_table[1][0]] << cell_state_str_v[m_table[2][0]] << std::endl;
+	return false;
+}
+bool Board::valid_placement(const int x, const int y) {
+    // check if x and y are within the bounds of the board
+	if (x >= 0 && x < 3 && y >= 0 && y < 3)
+	    if (m_table[x][y] == CellState::eNone)
+            return true;
+    return false;
 }
 
-void Board::d_print_current_state() {
-	for (auto& row : m_table) {
-		for (auto& cell : row) {
-			//std::cout << cell_state_str_v[cell];
-		}
-		std::cout << std::endl;
-	}
-}
+bool Board::check_for_winner() { return false; }
 
-void Board::d_generate_board() {
-	for (auto& row : m_table) {
-		for (auto& cell :row) {
-			cell = CellState::eX;
-		}
-	}
-}
 
 
 } // namespace tic_tac_toe
