@@ -16,4 +16,4 @@ float DeltaTime::operator()() {
 	start = now;
 	return value;
 }
-} // namespace facade
+} // namespace cg

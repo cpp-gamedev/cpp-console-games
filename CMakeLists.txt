@@ -12,6 +12,6 @@ add_subdirectory(lib)
 add_executable(cpp-console-games)
 target_sources(${PROJECT_NAME} PRIVATE "src/main.cpp")
 
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_link_libraries(${PROJECT_NAME} PUBLIC
         ${target_prefix}::util
         )

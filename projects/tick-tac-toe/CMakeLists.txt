@@ -7,6 +7,10 @@ project(tick-tac-toe)
 
 add_executable(tick-tac-toe src/tic_tac_toe.cpp)
 
+target_link_libraries(${PROJECT_NAME} PUBLIC
+        ${target_prefix}::util
+        )
+
 target_include_directories(tick-tac-toe
         PUBLIC
         include

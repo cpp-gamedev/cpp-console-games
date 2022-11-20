@@ -1,5 +1,8 @@
 #include <iostream>
 
+/*
+ * This is here exclusively for CMake.
+ */
 int main() {
 	std::cout << "Welcome to C++ Console Games!" << std::endl;
 	std::cout << std::endl;
